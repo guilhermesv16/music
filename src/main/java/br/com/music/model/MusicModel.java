@@ -1,5 +1,6 @@
 package br.com.music.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 import io.quarkus.hibernate.orm.panache.PanacheEntity;
@@ -7,6 +8,7 @@ import io.quarkus.hibernate.orm.panache.PanacheEntity;
 @Entity
 public class MusicModel extends PanacheEntity {
 
+    @Column(length = 50)
     private String name;
     private String artist;
     private String format;

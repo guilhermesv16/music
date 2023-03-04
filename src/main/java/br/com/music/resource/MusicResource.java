@@ -14,11 +14,14 @@ import javax.inject.Inject;
 
 import br.com.music.controller.MusicController;
 import br.com.music.model.MusicModel;
+import br.com.music.repository.MusicRepository;
 
 @Path("/music")
 public class MusicResource {
     @Inject
     MusicController musicController;
+    @Inject
+    MusicRepository musicRepository;
 
     // BUSCAR E LISTAR TODAS AS MUSICAS
     @GET
@@ -53,5 +56,17 @@ public class MusicResource {
     @Path("/{id}")
     public void deleteMusic(@PathParam("id") Long id) {
         musicController.deleteMusicById(id);
+    }
+
+    @GET
+    @Path("/count")
+    public long count(){
+        return musicRepository.count();
+    }
+
+    @GET
+    @Path("/search/{nome}")
+    public MusicModel search(@PathParam("nome") String name){
+        return musicRepository.findByName(name);
     }
 }

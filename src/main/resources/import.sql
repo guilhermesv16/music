@@ -3,3 +3,9 @@
 -- insert into myentity (id, field) values(nextval('hibernate_sequence'), 'field-1');
 -- insert into myentity (id, field) values(nextval('hibernate_sequence'), 'field-2');
 -- insert into myentity (id, field) values(nextval('hibernate_sequence'), 'field-3');
+
+--insert into musicModel (name, artist, format, duration, album) values( 'a', 'a', 'a', 'a', 'a');
+--insert into musicModel (name, artist, format, duration, album) values( 'b', 'b', 'b', 'b', 'b');
+--insert into musicModel (name, artist, format, duration, album) values( 'c', 'c', 'c', 'c', 'c');
+--nsert into musicModel (name, artist, format, duration, album) values( 'd', 'd', 'd', 'd', 'd');
+--insert into musicModel (name, artist, format, duration, album) values( 'e', 'e', 'e', 'e', 'e');
